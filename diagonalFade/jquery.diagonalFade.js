@@ -8,6 +8,7 @@
  *
  * To Do:
  * + Extend Cycle or write own (based on jquery.cycle.lite.js)
+ * + Make it so it's not just for a fixed container
  */
  
 (function($) {
@@ -19,9 +20,12 @@
         };
     }
     
-    $.fn.diagonalFade = function(customOptions){
-        var options = $.extend({},$.fn.diagonalFade.defaultOptions, customOptions); 
-        return this.each(function(){
+    $.fn.diagonalFade = function(customOptions) {
+        
+        var options = $.extend({},$.fn.diagonalFade.defaultOptions, customOptions);
+        
+        return this.each(function() {
+            
             var $this = $(this);
             
             // Get Container information
@@ -71,19 +75,11 @@
                     f.push(group);
                 }
                 if(options.fadeDirection_y == 'top-bottom' && options.fadeDirection_x == 'left-right') {
-                    $this.children(":first").animate({
-                        opacity: o
-                    }, options.time, function() {
-                        b = 0;
-                        cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
-                    });
+                    b = -1;
+                    cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
                 } else if(options.fadeDirection_y == 'bottom-top' && options.fadeDirection_x == 'right-left') {
-                    $this.children(":last").animate({
-                        opacity: o
-                    }, options.time, function() {
-                        b = f.length;
-                        cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
-                    });
+                    b = f.length;
+                    cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
                 }
             } else if((options.fadeDirection_y == 'bottom-top' && options.fadeDirection_x == 'left-right')
                 || (options.fadeDirection_y == 'top-bottom' && options.fadeDirection_x == 'right-left')) {
@@ -97,21 +93,11 @@
                     f.push(group);
                 }
                 if(options.fadeDirection_y == 'bottom-top' && options.fadeDirection_x == 'left-right') {
-                    var k = f[0][0] + 1;
-                    $this.children(":nth-child("+k+")").animate({
-                        opacity: o
-                    }, options.time, function() {
-                        b = 0;
-                        cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
-                    });
+                    b = -1;
+                    cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
                 } else if(options.fadeDirection_y == 'top-bottom' && options.fadeDirection_x == 'right-left') {
-                    var k = f[f.length - 1][0] + 1;
-                    $this.children(":nth-child("+k+")").animate({
-                        opacity: o
-                    }, options.time, function() {
-                        b = f.length;
-                        cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
-                    });
+                    b = f.length;
+                    cascade($this, f, b, options.fadeDirection_x, options.fadeDirection_y, o);
                 }
             }
         });
@@ -162,12 +148,12 @@
                     if ($.isFunction(options.complete)) options.complete.apply(this);
                 }
             }
-        }
+        };
     };
     
     $.fn.diagonalFade.defaultOptions = {
         time: 100,
-        fadeDirection_x: 'right-left',  // "left-right" || "right-left"
+        fadeDirection_x: 'left-right',  // "left-right" || "right-left"
         fadeDirection_y: 'top-bottom',  // "top-bottom" || "bottom-top"
         fade: 'out',                    // "in" || "out"
         complete: null                  // Set Interval?

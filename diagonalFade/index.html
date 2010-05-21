@@ -9,8 +9,6 @@
             var y = parseInt(Math.random() * 2); // top-bototm
             var f = _f; // fade out
             
-            console.log(x);
-            
             if(x > 0) x = 'left-right';
             else x = 'right-left';
             
@@ -25,10 +23,8 @@
                 f = true;
             }
             
-            console.log('x: ' + x + ', y: ' + y + ', f: ' + f);
-            
-            $('#slideshow').diagonalFade({
-                time: 50,
+            $('#cascade').diagonalFade({
+                time: 100,
                 fadeDirection_x: x,
                 fadeDirection_y: y,
                 fade: s,
@@ -40,50 +36,57 @@
         
         jQuery(function($){
             slideshow(false);
+            $('#cycle').cycle({
+                timeout: 100,
+                speed: 250
+            });
         });   
     </script>
 </head>
 <body>
     
     <h1 style="width:200px;margin:5px 0;padding:5px;text-transform:uppercase;font-family:sans-serif;font-weight:500;letter-spacing:2px;word-spacing:2px;text-align:center;font-size:10px;background:#ccc;color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;">Diagonal Fade Example</h1>
+    <h1 style="width:200px;margin:5px 0;padding:5px;text-transform:uppercase;font-family:sans-serif;font-weight:500;letter-spacing:2px;word-spacing:2px;text-align:center;font-size:10px;background:#ccc;color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;">Fixed Width</h1>
     
-    <div id="slideshow" width="960" style="width:960px;">
-        <img src = "_i/1.jpg" alt = "Shoes" />
-        <img src = "_i/2.jpg" alt = "Shoes" />
-        <img src = "_i/3.jpg" alt = "Shoes" />
-        <img src = "_i/4.jpg" alt = "Shoes" />
-        <img src = "_i/5.jpg" alt = "Shoes" />
-        <img src = "_i/6.jpg" alt = "Shoes" />
-        <img src = "_i/7.jpg" alt = "Shoes" />
-        <img src = "_i/8.jpg" alt = "Shoes" />
-        <img src = "_i/9.jpg" alt = "Shoes" />
-        <img src = "_i/10.jpg" alt = "Shoes" />
-        <img src = "_i/11.jpg" alt = "Shoes" />
-        <img src = "_i/12.jpg" alt = "Shoes" />
-        <img src = "_i/13.jpg" alt = "Shoes" />
-        <img src = "_i/14.jpg" alt = "Shoes" />
-        <img src = "_i/15.jpg" alt = "Shoes" />
-        <img src = "_i/16.jpg" alt = "Shoes" />
-        <img src = "_i/17.jpg" alt = "Shoes" />
-        <img src = "_i/18.jpg" alt = "Shoes" />
-        <img src = "_i/19.jpg" alt = "Shoes" />
-        <img src = "_i/20.jpg" alt = "Shoes" />
-        <img src = "_i/21.jpg" alt = "Shoes" />
-        <img src = "_i/22.jpg" alt = "Shoes" />
-        <img src = "_i/23.jpg" alt = "Shoes" />
-        <img src = "_i/24.jpg" alt = "Shoes" />
-        <img src = "_i/25.jpg" alt = "Shoes" />
-        <img src = "_i/26.jpg" alt = "Shoes" />
-        <img src = "_i/27.jpg" alt = "Shoes" />
-        <img src = "_i/28.jpg" alt = "Shoes" />
-        <img src = "_i/29.jpg" alt = "Shoes" />
-        <img src = "_i/30.jpg" alt = "Shoes" />
-        <img src = "_i/31.jpg" alt = "Shoes" />
-        <img src = "_i/32.jpg" alt = "Shoes" />
-        <img src = "_i/33.jpg" alt = "Shoes" />
-        <img src = "_i/34.jpg" alt = "Shoes" />
-        <img src = "_i/35.jpg" alt = "Shoes" />
-        <img src = "_i/36.jpg" alt = "Shoes" />
+    <div id="cascade" width="960" style="width:960px;">
+        <!-- width and height must be defined on the first img -->
+        <!-- img's must all be same width and height -->
+        <img src = "_i/1.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/2.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/3.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/4.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/5.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/6.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/7.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/8.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/9.jpg"  width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/10.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/11.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/12.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/13.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/14.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/15.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/16.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/17.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/18.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/19.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/20.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/21.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/22.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/23.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/24.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/25.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/26.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/27.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/28.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/29.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/30.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/31.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/32.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/33.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/34.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/35.jpg" width = "100" height = "125" alt = "Shoes" />
+        <img src = "_i/36.jpg" width = "100" height = "125" alt = "Shoes" />
     </div>
 </body>
 </html>
