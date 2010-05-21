@@ -2,7 +2,6 @@
  * jQuery Diagonal Matrix Fade Plugin
  * Examples and documentation at: http://jonobr1.com/
  * Copyright (c) 2010 Jono Brandel
- * For Prologue Films: http://prologue.com/
  * Version: .01 (18-MAY-2010)
  * Requires: jQuery v1.3.2 or later
  *
