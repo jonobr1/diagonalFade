@@ -161,5 +161,5 @@
 		fadeDirection_y: 'top-bottom',	// "top-bottom" || "bottom-top"
 		fade: 'out',					// "in" || "out"
 		complete: null					// Set Interval?
-	}; 
+	};
 })(jQuery);
