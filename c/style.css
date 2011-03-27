@@ -45,6 +45,10 @@ p {
 	font-size: 11px;
 }
 
+img {
+	border: 0 !important;
+}
+
 a#download:link, a#download:visited {
 	margin-top: -20px;
 	display: block;
