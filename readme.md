@@ -1,7 +1,5 @@
-jQuery plugins
-====================
+## diagonalFade
 
-This repository stores all custom [jQuery](http://jquery.com/) plugins [I](http://jonobr1.com/) write. Might add [snippets](http://gist.github.com/jonobr1) as well. Please don't be shy. If you have any questions please don't hesitate to message me.
+For most up-to-date information check out the public facing [page](http://jonobr1.github.com/diagonalFade).
 
--   ### diagonalFade
-    diagonalFade is a simple jQuery animation plugin. It allows you to traverse the children of the specified element container diagonally instead of linearly. There is an example file that demonstrates the plugin's use.
+By [jonobr1](http://jonobr1.com/) and [jQuery](http://jquery.com/)

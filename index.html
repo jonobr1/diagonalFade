@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+
+	<title>diagonalFade : A jQuery plugin</title>
+
+	<meta name = "keywords" content = "diagonal, fade, jquery, plugin, slideshow, image, grid, minimal" />
+	<meta name = "author" content = "jonobr1" />
+	<meta name = "description" content = "diagonalFade is a jQuery plugin to fade in-and-out items in a container." />
+	
+	<link href = "c/gs.css"    media = "screen" rel = "stylesheet" type = "text/css" />
+	<link href = "c/style.css" media = "screen" rel = "stylesheet" type = "text/css" />
+	
+	<!--<script type = "text/javascript" src = "http://www.google.com/jsapi"></script>-->
+	<script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type = "text/javascript" src = "j/jquery.diagonalFade.js"></script>
+	<script type = "text/javascript">
+		//<![CDATA[
+
+			// Automates the diagonalFade effect
+			function slideshow(selector, _f) {
+
+				var x = parseInt(Math.random() * 2); // left-right
+				var y = parseInt(Math.random() * 2); // top-bototm
+				var f = _f; // fade out || fade in
+
+				if(x > 0) x = 'left-right';
+				else      x = 'right-left';
+
+				if(y > 0) y = 'top-bottom';
+				else      y = 'bottom-top';
+
+				var s = 'out';
+
+				if(f) {
+					s = 'in';
+					f = false;
+				} else {
+					s = 'out';
+					f = true;
+				}
+
+				$(selector).diagonalFade({
+					time: 100,
+					fadeDirection_x: x,
+					fadeDirection_y: y,
+					fade: s,
+					complete: function() {
+						slideshow(selector, f);
+					}
+				});
+			}
+	
+			// google.load("jquery", "1.3.2");		// Load jQuery
+			// google.setOnLoadCallback(function() {
+			$(function() {
+
+				// select our containers and execute the slideshow
+				slideshow("#image_cascade", false);
+				slideshow("#text_cascade", false);
+			});
+	
+		//]]>
+	</script>
+</head>
+<body>
+
+	<div class = "container_9 section">
+		<h1>diagonalFade</h1>
+	</div>
+
+	<div class = "container_9" style = "border:none; margin-top: 0px; margin-bottom: 0px;">
+		<p class = "grid_3">
+			is a <a href = "http://jquery.com/">jQuery</a> plugin allowing you to easily specify direction, fade-in, fade-out, and a host of other options to a grouping of elements. All you have to do is import it, specify the container to which the group of items resides, and poof, you're off and away.
+		</p>
+		<p class = "grid_3">
+			diagonalFade is great for inventory or anything with a large amount of items ordered in a <a href = "http://960.gs/">grid</a>. diagonalFade has been tested in all modern browser&apos;s with jQuery 1.3.2 &mdash; if you&apos;d like to share any of your findings please don&apos;t hesitate to contribute to on <a href = "http://github.com/jonobr1/diagonalFade">GitHub</a>!
+		</p>
+		<div class = "grid_3">
+			<center>
+				<a id = "download" href = "#"><img src = "i/download.png" width = "90" height = "90" alt = "Download" /></a>
+				<br />
+				<span class = "mute">Download the minified version.</span>
+			</center>
+		</div>
+		<div class = "clear"></div>
+	</div>
+
+	<div class = "container_9 section" style = "margin-top: 0px;">
+		<div class = "grid_3">
+			<h3>Diagonal Fade Example</h3>
+			<h3>Fixed Width</h3>
+		</div>
+		<p style = "color: #999; margin: 0; vertical-align: bottom;">
+			<br /><br />
+			N.B &mdash; view source to see usage.
+		</p>
+		<div class = "clear"></div>
+	</div>
+
+	<div class = "container_9 section">
+		Example with <code>&lt;img&gt;</code>&apos;s:
+	</div>
+	<div id = "image_cascade" class = "container_9">
+		
+		<!-- width and height must be defined on the first img -->
+		<!-- img's must all be same width and height -->
+		
+		<img src = "i/1.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/2.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/3.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/4.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/5.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/6.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/7.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/8.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/9.jpg"  height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/10.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/11.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/12.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/13.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/14.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/15.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/16.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/17.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/18.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/19.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/20.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/21.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/22.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/23.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/24.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/25.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/26.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/27.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/28.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/29.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/30.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/31.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/32.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/33.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/34.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/35.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<img src = "i/36.jpg" height = "125" class = "grid_1" alt = "Shoes" />
+		<div class = "clear"></div>
+	</div>
+
+	<div class = "container_9 section">
+		Example with <code>&lt;div&gt;</code>&apos;s:
+	</div>
+	<div id = "text_cascade" class = "container_9">
+		<div width = "100" class = "grid_1 character">A</div>
+		<div width = "100" class = "grid_1 character">B</div>
+		<div width = "100" class = "grid_1 character">C</div>
+		<div width = "100" class = "grid_1 character">D</div>
+		<div width = "100" class = "grid_1 character">E</div>
+		<div width = "100" class = "grid_1 character">F</div>
+		<div width = "100" class = "grid_1 character">G</div>
+		<div width = "100" class = "grid_1 character">H</div>
+		<div width = "100" class = "grid_1 character">I</div>
+		<div width = "100" class = "grid_1 character">J</div>
+		<div width = "100" class = "grid_1 character">K</div>
+		<div width = "100" class = "grid_1 character">L</div>
+		<div width = "100" class = "grid_1 character">M</div>
+		<div width = "100" class = "grid_1 character">N</div>
+		<div width = "100" class = "grid_1 character">O</div>
+		<div width = "100" class = "grid_1 character">P</div>
+		<div width = "100" class = "grid_1 character">Q</div>
+		<div width = "100" class = "grid_1 character">R</div>
+		<div width = "100" class = "grid_1 character">S</div>
+		<div width = "100" class = "grid_1 character">T</div>
+		<div width = "100" class = "grid_1 character">U</div>
+		<div width = "100" class = "grid_1 character">V</div>
+		<div width = "100" class = "grid_1 character">W</div>
+		<div width = "100" class = "grid_1 character">X</div>
+		<div width = "100" class = "grid_1 character">Y</div>
+		<div width = "100" class = "grid_1 character">Z</div>
+		<div width = "100" class = "grid_1 character">0</div>
+		<div width = "100" class = "grid_1 character">1</div>
+		<div width = "100" class = "grid_1 character">2</div>
+		<div width = "100" class = "grid_1 character">3</div>
+		<div width = "100" class = "grid_1 character">4</div>
+		<div width = "100" class = "grid_1 character">5</div>
+		<div width = "100" class = "grid_1 character">6</div>
+		<div width = "100" class = "grid_1 character">7</div>
+		<div width = "100" class = "grid_1 character">8</div>
+		<div width = "100" class = "grid_1 character">9</div>
+		<div width = "100" class = "clear"></div>
+	</div>
+
+	<footer class = "container_9">
+		By <a href = "http://jonobr1.com/">jonobr1</a> &mdash; only for <a href = "http://jquery.com/">jQuery</a>. Images from <a href = "http://needsupply.com/">Need Supply Co.</a>
+	</footer>
+</body>
+</html>

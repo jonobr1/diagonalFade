@@ -1,0 +1,105 @@
+* {
+	margin:  0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	word-spacing: 2px;
+	font-size: 11px;
+	color: #333;
+	background: #fff url('../i/diagonal.png') top right no-repeat;
+}
+
+h2 {
+	color: #444;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+h3 {
+
+	width: 200px;
+	margin: 5px 0;
+	padding: 5px;
+
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 100;
+	text-align: center;
+	font-size: 10px;
+
+	background: #ccc;
+	color: #fff;
+
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+}
+
+p {
+	margin: 0 0 25px 0;
+	line-height: 17px;
+	font-size: 11px;
+}
+
+a#download:link, a#download:visited {
+	margin-top: -20px;
+	display: block;
+	width: 100px;
+	height: 100px;
+
+	border: 1px dashed #333;
+	-webkit-border-radius: 100px;
+	   -moz-border-radius: 100px;
+	        border-radius: 100px;
+}
+
+.mute { font-size: 9px; color: #444; }
+
+a:link, a:visited {
+	text-decoration: none;
+	padding: 3px 5px;
+
+	color: #333;
+	background: #ccc;
+
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+}
+a:hover, a:active {
+	background: #efefef;
+}
+
+.container_9 {;
+	border-bottom: 1px solid #efefef;
+}
+
+#text_cascade .character {
+
+	height: 55px;
+	float:  left;
+
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 2px;
+	text-align: center;
+
+	color: #333;
+	background: #ccc;
+
+	padding: 45px 0 0 0;
+	margin: 2px 3px 2px 2px;
+}
+
+#text_cascade .character:hover {
+	background: #efefef;
+}
+
+footer, .section {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
