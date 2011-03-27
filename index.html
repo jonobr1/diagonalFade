@@ -10,7 +10,6 @@
 	<link href = "c/gs.css"    media = "screen" rel = "stylesheet" type = "text/css" />
 	<link href = "c/style.css" media = "screen" rel = "stylesheet" type = "text/css" />
 	
-	<!--<script type = "text/javascript" src = "http://www.google.com/jsapi"></script>-->
 	<script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type = "text/javascript" src = "j/jquery.diagonalFade.js"></script>
 	<script type = "text/javascript">
@@ -49,16 +48,24 @@
 					}
 				});
 			}
-	
-			// google.load("jquery", "1.3.2");		// Load jQuery
-			// google.setOnLoadCallback(function() {
+
 			$(function() {
 
 				// select our containers and execute the slideshow
 				slideshow("#image_cascade", false);
 				slideshow("#text_cascade", false);
 			});
-	
+
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-5927630-15']);
+				_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
 		//]]>
 	</script>
 </head>
