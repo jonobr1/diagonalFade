@@ -61,6 +61,10 @@ a#download:link, a#download:visited {
 	        border-radius: 100px;
 }
 
+a#download:hover, a#download:active {
+    background: #efefef;
+}
+
 .mute { font-size: 9px; color: #444; }
 
 a:link, a:visited {
