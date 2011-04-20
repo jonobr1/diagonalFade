@@ -62,7 +62,7 @@
 				a[i] = new Array(n);
 				for(var j = 0; j < n; j++) {
 					// Only add items with a width and height
-					if(children[i * n + j].offsetWidth > 0 && children[i * n + j].offsetHeight > 0) {
+					if(children[i * n + j] && children[i * n + j].offsetWidth > 0 && children[i * n + j].offsetHeight > 0) {
 						a[i][j] = b;
 						b++;
 					}
