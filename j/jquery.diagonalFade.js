@@ -72,10 +72,10 @@
 			// Fade In or Fade Out
 			switch(options.fade) {
 				case 'in':
-					var o = 1;
+					var o = 1.0;
 				break;
 				case 'out':
-					var o = 0;
+					var o = 0.0;
 				break;
 			}
 			
@@ -173,7 +173,7 @@
 		time: 100,
 		fadeDirection_x: 'left-right',	// "left-right" || "right-left"
 		fadeDirection_y: 'top-bottom',	// "top-bottom" || "bottom-top"
-		fade: 'out',					// "in" || "out"
-		complete: null					// Set Interval?
+		fade: 'out',										// "in" || "out"
+		complete: null									// Set Interval?
 	};
 })(jQuery);
