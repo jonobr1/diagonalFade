@@ -72,7 +72,7 @@
 			// Fade In or Fade Out
 			switch(options.fade) {
 				case 'in':
-					var o = 100;
+					var o = 1;
 				break;
 				case 'out':
 					var o = 0;
