@@ -5,7 +5,7 @@
  * Version: .01 (18-MAY-2010)
  * Requires: jQuery v1.3.2 or later
  *
- * To Do:
+ * TODO:
  * + Extend Cycle or write own (based on jquery.cycle.lite.js)
  * + Make it so it's not just for a fixed container
  *
@@ -23,7 +23,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 (function($) {
 	
 	// if $.support is not defined (pre jQuery 1.3) add what I need
@@ -47,12 +47,12 @@
 			
 			var children = $this.children();
 			// Abstract this to check all elements
-			var w  = children[0].offsetWidth;
-			var h  = children[0].offsetHeight;
-			
+			var w = $(children[0]).outerWidth(true);
+			var h = $(children[0]).outerHeight(true);
+
 			// Calculate rows and Columns for our Matrix
-			var m = parseInt(ch / h);
-			var n = parseInt(cw / w);
+			var n = Math.floor(cw / w);
+			var m = Math.floor(ch / h);
 			
 			// Create an array to hold the order
 			var a = [];
@@ -130,7 +130,7 @@
 			var isTrigger = true;
 			
 			if((c_x == 'left-right' && c_y == 'top-bottom') ||
-			   (c_x == 'left-right' && c_y == 'bottom-top')) {
+				 (c_x == 'left-right' && c_y == 'bottom-top')) {
 				i++;
 				if(f[i]) {
 					for(var j = 0; j < f[i].length; j++) {
@@ -148,7 +148,7 @@
 					if ($.isFunction(options.complete)) options.complete.apply(this);
 				}
 			} else if((c_x == 'right-left' && c_y == 'top-bottom') ||
-				      (c_x == 'right-left' && c_y == 'bottom-top')) {
+							(c_x == 'right-left' && c_y == 'bottom-top')) {
 				i--;
 				if(i >= 0) {
 					for(var j = 0; j < f[i].length; j++) {
